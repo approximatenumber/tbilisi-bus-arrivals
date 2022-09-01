@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-        <h1>{% block title %} Where is my bus?{% endblock %}</h1>
-        <h2>Get bus schedule by stop ID:</h2>
 
         {% if not items %}
             <h2>Oops! Looks like error occured.</h2>
         {% else %}
+            <h2>These buses are coming to 940 bus stop:</h2>
             <table class="table table-striped">
                 <tr>
                     <th scope="col">Bus No</th>
