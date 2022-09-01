@@ -30,3 +30,7 @@ def get_schedule(stop_id: str) -> List:
         )
     print(schedule)
     return schedule
+
+@app.route('about', methods=["GET"])
+def about() -> str:
+  return render_template('about.html')
