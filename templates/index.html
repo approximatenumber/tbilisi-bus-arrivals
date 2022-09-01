@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Where is my bus?{% endblock %}</h1>
+    <h2>Get bus schedule by stop ID:</h2>
+    <div class="form-group">
+    <form method="POST" action="/">
+        <input name="stop_id">
+        <input type="submit" value="Get schedule" name="get_schedule"/ class="btn btn-primary">
+    </div>
+    </form>
+{% endblock %}

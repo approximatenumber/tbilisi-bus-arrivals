@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <h1>{% block title %} Where is my bus?{% endblock %}</h1>
+        <h2>Get bus schedule by stop ID:</h2>
+
+        {% if not items %}
+            <h2>Oops! Looks like error occured.</h2>
+        {% else %}            
+            <table class="table table-striped">
+                <tr>
+                    <th scope="col">Bus No</th>
+                    <th scope="col">Arrival time</th>
+                    <th scope="col">Destination</th>
+                </tr>
+                {% for item in items %}
+                <tr>
+                    <th scope="row">{{item.bus}}</th>
+                    <td>{{item.time}} min</td>
+                    <td>{{item.destination}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+{% endblock %}
